@@ -6,7 +6,7 @@ There are a couple Robot-specific extensions we've made:
 
 ## Architecture
 
-You must write your software in `.chef` files. Put them into the `src\main\deploy\tonightsMenu` folder. 
+You must write your software in `.chef` files. Put them into [the `src\main\deploy\tonightsMenu` folder](https://github.com/RobotCasserole1736/chefBot/tree/master/src/main/deploy/tonightsMenu). 
 
 At robot init time, our little chefs read every "item" in the menu to make sure they understand what they'll be cooking.
 
@@ -24,9 +24,9 @@ Joystick in put is accessed by retrieving ingredients from the `nth refrigerator
 
  * `1st refrigerator`: Joy 0 LH Y axis
  * `2nd refrigerator`: Joy 0 RH X axis
- * `3rd refrigerator`: Joy 0 Button 0
- * `4th refrigerator`: Joy 0 Button 1
- * `5th refrigerator`: Joy 0 Button 2
+ * `3rd refrigerator`: Joy 0 Button 1
+ * `4th refrigerator`: Joy 0 Button 2
+ * `5th refrigerator`: Joy 0 Button 3
 
 ## Output
 
@@ -34,7 +34,9 @@ Joystick in put is accessed by retrieving ingredients from the `nth refrigerator
 
 When the recipe is served, the value at the top of each PWM-related baking sheet is popped and passed to the motor controller.
 
-## Other Chef References
+## References
+
+Special thanks to [Joost Rijneveld](https://joostrijneveld.nl/) for his [java-based Chef interpreter](https://github.com/joostrijneveld/Chef-Interpreter) that was the base of this project.
 
 [Dylan Beattie included it in his wonderful talk "The Art of Code"](https://www.youtube.com/watch?v=6avJHaC3C2U&feature=youtu.be&t=2309)
 
@@ -52,9 +54,13 @@ Chef is efficient for you: You can indulge two hobbies (coding and cooking) simu
 
 Chef reduces hard disk clutter: With a bit of care, you can encode your grandma's prize-winning recipe for chocolate chip cookies and that Machine Learning LQR State-Space Extended-PIDF Ramalamadingdong Decaf Turbo-Encabulator implementation in the same file! 
 
-Chef is relevant: Many great teams have words like "cheesy", "barbecue", and "corn" in their name. All great teams have eaten food at some point. You can now use your software to funnel your team toward greatness, which flows from food.
+Chef is relevant: Many great FRC teams have words like "cheesy", "barbecue", and "corn" in their name. Furthermore, all great FRC teams have eaten food at some point. You can now use your software to funnel your team toward greatness, which flows from food.
 
 # But, really, why?
 
 Because Chris got bored. 
+
+# Should I actually use this for anything?
+
+Probably not.
 
