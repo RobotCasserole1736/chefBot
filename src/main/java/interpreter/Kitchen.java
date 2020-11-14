@@ -25,8 +25,8 @@ public class Kitchen {
 	public Kitchen(HashMap<String, Recipe> recipes, Recipe mainrecipe,
 			Container[] mbowls, Container[] bdishes) {
 		this.recipes = recipes;
-		//start with at least 1 mixing bowl.
-		int maxbowl = 0;
+		
+		int maxbowl = 10; //start with at least 10 mixing bowls.
 		int maxdish = RobotHardwareOutputs.getInstance().getNumOutputs() + 1 - 1; //all hardaware outputs, plus one for stdout.
 		recipe = mainrecipe;
 		for (Method m : recipe.getMethods()) {

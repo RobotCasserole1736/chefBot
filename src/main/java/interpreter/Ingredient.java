@@ -14,7 +14,7 @@ public class Ingredient {
 		String[] tokens = ingredient.split(" ");
 		int i = 0;
 		state = Ingredient.State.Dry;
-		if (tokens[i].matches("^\\d*$"))
+		if (tokens[i].matches("^[\\d.-]*$"))
 		{
 			amount = Double.parseDouble(tokens[i]);
 			i++;
@@ -22,7 +22,7 @@ public class Ingredient {
 				state = Ingredient.State.Dry;
 				i++;
 			}
-			if (tokens[i].matches("^g|kg|pinch(es)?")) {
+			if (tokens[i].matches("^lb(s)|oz|g|kg|pinch(es)?")) {
 				state = Ingredient.State.Dry;
 				i++;
 			}

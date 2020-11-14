@@ -27,11 +27,19 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit(){
-
-    rb = new RecipeBook();
-
+    RobotHardwareInputs.getInstance();
+    RobotHardwareOutputs.getInstance();
   }
 
+  @Override
+  public void autonomousInit() {
+    rb = new RecipeBook();
+  }
+
+  @Override
+  public void teleopInit() {
+    rb = new RecipeBook();
+  }
 
   @Override
   public void autonomousPeriodic() {
@@ -58,12 +66,5 @@ public class Robot extends TimedRobot {
   public void disabledPeriodic() {
   }
 
-  @Override
-  public void autonomousInit() {
-  }
-
-  @Override
-  public void teleopInit() {
-  }
 
 }

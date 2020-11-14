@@ -1,9 +1,6 @@
 package frc.robot;
 
-import java.util.ArrayList;
-
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.GenericHID.Hand;
 
 public class RobotHardwareInputs{
@@ -34,13 +31,13 @@ public class RobotHardwareInputs{
                 retVal = joyIn.getX(Hand.kRight);
             break;
             case 2:
-                retVal = joyIn.getRawButton(0) ? 1.0 : 0.0;
-            break;
-            case 3:
                 retVal = joyIn.getRawButton(1) ? 1.0 : 0.0;
             break;
-            case 4:
+            case 3:
                 retVal = joyIn.getRawButton(2) ? 1.0 : 0.0;
+            break;
+            case 4:
+                retVal = joyIn.getRawButton(3) ? 1.0 : 0.0;
             break;
             default: //ummmm nothing?
             break;

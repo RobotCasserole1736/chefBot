@@ -63,7 +63,7 @@ public class Method {
 				}; 
 		if (matchers[0].find()) {
 			ingredient = matchers[0].group(1);
-			fridgeIdx = Integer.parseInt(matchers[0].group(3))-1;
+			fridgeIdx = (matchers[0].group(4) == null ? 1 : Integer.parseInt(matchers[0].group(4))) - 1;
 			type = Type.Take;
 		}
 		else if (matchers[1].find()) {
